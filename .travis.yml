@@ -1,5 +1,14 @@
 language: c
 
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y yasm
+
+os: linux
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.9
+      - yasm
+env:
+   - MATRIX_EVAL="CC=gcc-4.9"
