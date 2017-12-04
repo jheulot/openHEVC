@@ -4,7 +4,7 @@ language: c
 os: linux
 
 before_install:
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.9" CC="gcc-4.9"; fi
+  - export CXX="g++-4.9" CC="gcc-4.9"
 addons:
   apt:
     sources:
