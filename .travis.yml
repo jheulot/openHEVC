@@ -12,4 +12,4 @@ addons:
       - yasm
       - libatomic1-dbg
 env:
-   - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
+   - CC=gcc-5
