@@ -4,7 +4,7 @@ language: c
 os: linux
 
 before_install:
-  - export CXX="g++-4.9" CC="gcc-4.9"
+  - export cc="gcc-4.9"
 addons:
   apt:
     sources:
