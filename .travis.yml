@@ -13,5 +13,6 @@ addons:
       - gcc-4.9
       - g++-4.9
       - yasm
-      - libsdl2-dev
-      - libsdl1.2-dev
+
+script:
+  - ./configure --disable-sdl2 --disable-sdl && make
