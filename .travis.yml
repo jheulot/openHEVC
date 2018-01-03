@@ -24,5 +24,4 @@ jobs:
     - stage: Build
       script: ./configure --disable-sdl2 --disable-sdl && make
     - stage : Do Conformance Tests
-      install: git clone https://github.com/jheulot/HEVCconformanceTest.git && cd HEVCconformanceTest && wget https://www.dropbox.com/sh/t737d4cuqakpphi/AADLyGfMWlP5IdtTr_TqclmTa?dl=1 -O files.zip && unzip files.zip -d avconv || true 
-      script: cd HEVCconformanceTest && ruby HEVCconformanceTest/runPattern.rb -dir avconv -exec ohplay
+      script: git clone https://github.com/jheulot/HEVCconformanceTest.git && cd HEVCconformanceTest && wget https://www.dropbox.com/sh/t737d4cuqakpphi/AADLyGfMWlP5IdtTr_TqclmTa?dl=1 -O files.zip && unzip files.zip -d avconv || true && cd HEVCconformanceTest && ruby HEVCconformanceTest/runPattern.rb -dir avconv -exec ohplay
